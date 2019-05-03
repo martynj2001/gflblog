@@ -1,0 +1,404 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreatePosts (20190501092122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190501092122_create_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190501092122"]]
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateCategories (20190501191046)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190501191046_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190501191046"]]
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-01 19:26:31.283117"], ["updated_at", "2019-05-01 19:26:31.283117"]]
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sustainable Home"], ["created_at", "2019-05-01 19:31:16.548966"], ["updated_at", "2019-05-01 19:31:16.548966"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Electric Vehicles"], ["created_at", "2019-05-01 19:31:16.552853"], ["updated_at", "2019-05-01 19:31:16.552853"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Veggie Garden"], ["created_at", "2019-05-01 19:31:16.555771"], ["updated_at", "2019-05-01 19:31:16.555771"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Environment"], ["created_at", "2019-05-01 19:31:16.558509"], ["updated_at", "2019-05-01 19:31:16.558509"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Recycle & Reuse"], ["created_at", "2019-05-01 19:31:16.561508"], ["updated_at", "2019-05-01 19:31:16.561508"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+Started GET "/" for ::1 at 2019-05-01 20:35:36 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 681ms (Views: 635.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-03 14:05:35 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 405ms (Views: 385.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-05-03 14:05:37 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/posts/_form.html.erb:15
+  Rendered posts/_form.html.erb (315.1ms)
+  Rendered posts/new.html.erb within layouts/application (318.3ms)
+Completed 200 OK in 383ms (Views: 347.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2019-05-03 14:05:45 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2019-05-03 18:39:19 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (374.6ms)
+Completed 500 Internal Server Error in 623ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `catergory' for #<#<Class:0x00007ff9d45ac988>:0x00007ff9d3fac740>
+Did you mean?  category):
+    2: 
+    3: <% Category.all.each do |category| %>
+    4: <li>
+    5: <%= link_to catergory.name, posts_path(category: category.name) %>
+    6: </li>
+    7: 
+    8: <% end %>
+  
+app/views/shared/_category_nav.html.erb:5:in `block in _app_views_shared__category_nav_html_erb___4313670050336285888_70355536577840'
+app/views/shared/_category_nav.html.erb:3:in `_app_views_shared__category_nav_html_erb___4313670050336285888_70355536577840'
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__123326976982997666_70355490024060'
+Started GET "/posts" for ::1 at 2019-05-03 18:40:11 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (3.3ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2019-05-03 18:40:16 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (1.8ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-05-03 18:40:18 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (279.1ms)
+  Rendered posts/_form.html.erb (285.4ms)
+  Rendered posts/new.html.erb within layouts/application (288.9ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007ff9d45ac988>:0x00007ff9d5b4a768>
+Did you mean?  @post):
+    1: <% if post.errors.any? %>
+    2:     <div id="error_explanation">
+    3:       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    4: 
+  
+app/views/shared/_error_messages.html.erb:1:in `_app_views_shared__error_messages_html_erb___2928170795848843119_70355496594340'
+app/views/posts/_form.html.erb:3:in `block in _app_views_posts__form_html_erb___604862407468775051_70355531386120'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___604862407468775051_70355531386120'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__3802692393986375434_70355504486460'
+Started GET "/posts/new" for ::1 at 2019-05-03 18:41:46 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/posts/_form.html.erb:6
+  Rendered posts/_form.html.erb (31.8ms)
+  Rendered posts/new.html.erb within layouts/application (34.8ms)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (1.8ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2019-05-03 18:41:59 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzTnH/oxdFxOqLxPY77g+EU+nnTAA6ZSKWRgGLJhHhBlQfJr6dw/vbOC4vLeCphLu3ULsB/lE44k92I67srTZw==", "post"=>{"category_id"=>"1", "title"=>"Solar Power", "content"=>"Testings"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `vategory_id' for #<Post:0x00007ff9da811628>
+Did you mean?  category_id
+               category_id?
+               category_id=):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started POST "/posts" for ::1 at 2019-05-03 19:04:47 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martynjones/.rvm/gems/ruby-2.5.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzTnH/oxdFxOqLxPY77g+EU+nnTAA6ZSKWRgGLJhHhBlQfJr6dw/vbOC4vLeCphLu3ULsB/lE44k92I67srTZw==", "post"=>{"category_id"=>"1", "title"=>"Solar Power", "content"=>"Testings"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `vategory_id' for #<Post:0x00007fbba3c0bbb8>
+Did you mean?  category_id
+               category_id?
+               category_id=):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started GET "/posts/new" for ::1 at 2019-05-03 19:04:52 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/posts/_form.html.erb:6
+  Rendered posts/_form.html.erb (23.9ms)
+  Rendered posts/new.html.erb within layouts/application (29.1ms)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.0ms)
+Completed 200 OK in 302ms (Views: 298.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2019-05-03 19:05:09 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I3M1fCONZLc5DyO/uMziTnp2oRuWXrlmwpSaAr+tLSqLCSIOc+OTdiO+e7aQAFz8d3wP4e3gR/C2QE9+Wm3Obw==", "post"=>{"category_id"=>"1", "title"=>"Test", "content"=>"Test some words."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `vategory_id' for #<Post:0x00007fbba5f80cb0>
+Did you mean?  category_id
+               category_id?
+               category_id=):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started POST "/posts" for 127.0.0.1 at 2019-05-03 19:06:16 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I3M1fCONZLc5DyO/uMziTnp2oRuWXrlmwpSaAr+tLSqLCSIOc+OTdiO+e7aQAFz8d3wP4e3gR/C2QE9+Wm3Obw==", "post"=>{"category_id"=>"1", "title"=>"Test", "content"=>"Test some words."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Test"], ["content", "Test some words."], ["category_id", 1], ["created_at", "2019-05-03 18:06:16.851391"], ["updated_at", "2019-05-03 18:06:16.851391"]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 29ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2019-05-03 19:06:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.3ms)
+Completed 200 OK in 61ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-05-03 19:06:23 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.1ms)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2019-05-03 19:06:27 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.6ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-05-03 19:06:28 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.2ms)
+Completed 200 OK in 50ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-05-03 19:06:38 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (4.1ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-05-03 19:07:02 +0100
+Started GET "/posts/new" for 127.0.0.1 at 2019-05-03 19:07:02 +0100
+Processing by PostsController#index as HTML
+Processing by PostsController#new as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/posts/_form.html.erb:6
+  Rendered posts/_form.html.erb (9.3ms)
+  Rendered posts/new.html.erb within layouts/application (13.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (3.4ms)
+Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (3.4ms)
+Completed 200 OK in 90ms (Views: 80.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-05-03 19:08:57 +0100
+Started GET "/posts/new" for 127.0.0.1 at 2019-05-03 19:08:57 +0100
+Processing by PostsController#index as HTML
+Processing by PostsController#new as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (6.1ms)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/index.html.erb within layouts/application (17.9ms)
+  ↳ app/views/posts/_form.html.erb:6
+  Rendered posts/_form.html.erb (13.3ms)
+  Rendered posts/new.html.erb within layouts/application (18.8ms)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (2.0ms)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 87ms (Views: 81.0ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/views/shared/_category_nav.html.erb:3
+  Rendered shared/_category_nav.html.erb (4.0ms)
+Completed 200 OK in 94ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
