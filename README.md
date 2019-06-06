@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* TO DO:
+
+# 6 Jun
+
+* Create static pages for Home & About. Hoem page will need to dip into post sDB to pull out latest posts.
+* Created pages controller with #show to display staic pages - probably use for About page.
+* Need to look into adding addtional 'index page' to Posts model that acts as Home page displaying latest Blog posts.
+
