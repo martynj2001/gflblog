@@ -1,23 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.5.1 
+* Rails version: 5.2.3
 
-Things you may want to cover:
+* Custom Gems:
 
-* Ruby version
-
-* System dependencies
+    - High Volate Gem - For static Pages
 
 * Configuration
 
 * Database creation
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
@@ -29,4 +23,5 @@ Things you may want to cover:
 * Created pages controller with #show to display staic pages - probably use for About page.
 * Need to look into adding addtional 'index page' to Posts model that acts as Home page displaying latest Blog posts.
 * Use Bootstrap Cards for Latest Blog posts on Home page.
+
 
