@@ -41,6 +41,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'high_voltage', '~> 3.1'
+gem 'carrierwave'
+gem 'devise'
 
 # End Custom gflBlog Gems
 
