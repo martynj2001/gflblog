@@ -6,6 +6,10 @@
 * Custom Gems:
 
     - High Volate Gem - For static Pages
+    - bootstrap', '~> 4.3.1'
+	- jquery-rails
+	- carrierwave - Upload images.
+	- devise - simple authentication.
 
 * Configuration
 
